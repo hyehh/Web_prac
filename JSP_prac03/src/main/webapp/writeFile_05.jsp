@@ -4,9 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>파일 저장 결과</title>
 </head>
 <body>
-
+	<h2>파일 저장 결과</h2>
+	<%
+		String str = request.getParameter("result");
+	
+		if(str.equals("success")){
+			
+			out.print("저장되었습니다.");
+		}else{
+			out.print("저장에 실패하였습니다.");
+		}
+	%>
 </body>
 </html>

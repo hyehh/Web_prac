@@ -22,7 +22,7 @@
 		PrintWriter writer = null;
 		
 		try{
-			String filePath = application.getRealPath("file.txt");
+			String filePath = application.getRealPath("/" + filename);
 			
 			writer = new PrintWriter(filePath);
 			
