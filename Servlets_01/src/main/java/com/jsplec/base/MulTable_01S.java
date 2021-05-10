@@ -1,6 +1,8 @@
 package com.jsplec.base;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,24 @@ public class MulTable_01S extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html; charset=UTF-8");
+		
+		int number = Integer.parseInt(request.getParameter("number"));
+		
+		PrintWriter writer = null;
+		
+			
+			writer = response.getWriter();
+			writer.println("<html>");
+			writer.println("<head>");
+			writer.println("<title>" + number + "단 결과화면</title>");
+			writer.println("</head>");
+			writer.println("<body>");
+			for(int i=1; i<=9; i++) {
+			writer.println(number + " X " + i + " = " + (number*i) + "<br>");
+		}
+			writer.println("</body>");
+			writer.println("</html>");
 	}
 
 	/**
@@ -35,7 +54,25 @@ public class MulTable_01S extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		int number = Integer.parseInt(request.getParameter("number"));
+		
+		PrintWriter writer = null;
+		
+			
+			writer = response.getWriter();
+			writer.println("<html>");
+			writer.println("<head>");
+			writer.println("<title>" + number + "단 결과화면</title>");
+			writer.println("</head>");
+			writer.println("<body>");
+			for(int i=1; i<=9; i++) {
+			writer.println(number + " X " + i + " = " + (number*i) + "<br>");
+		}
+			writer.println("</body>");
+			writer.println("</html>");
+			}
 
 }

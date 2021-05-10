@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>구구단</title>
 </head>
 <body>
-
+	<form action="MulTable_01S" method="post">
+		입력 : <input type="text" name="number" size="15"> 
+		<input type="submit" value="구구단 계산">
+	</form>
 </body>
 </html>
