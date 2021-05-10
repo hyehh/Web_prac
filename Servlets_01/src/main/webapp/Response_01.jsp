@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>사이트명 입력</title>
 </head>
 <body>
-
+	이동하고자 하는 사이트명을 입력하고 확인 버튼을 누르세요. <br><br>
+	<form action="Response_01S" method="post">
+		사이트명 : <input type="text" name="name" size="20"> 
+		<input type="submit" value="확인"> (ex : naver, daum, google)
+	</form>
 </body>
 </html>

@@ -27,7 +27,21 @@ public class Response_01S extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String name = request.getParameter("name");
+		
+		switch(name) {
+		case "naver" :
+			response.sendRedirect("https://www.naver.com");
+			break;
+		case "daum" :
+			response.sendRedirect("https://www.daum.net");
+			break;
+		case "google" :
+			response.sendRedirect("https://www.google.com");
+			break;
+			default : 
+				response.sendRedirect("https://www.yahoo.com");
+		}
 	}
 
 	/**
@@ -35,7 +49,21 @@ public class Response_01S extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		String name = request.getParameter("name");
+		
+		switch(name) {
+		case "naver" :
+			response.sendRedirect("https://www.naver.com");
+			break;
+		case "daum" :
+			response.sendRedirect("https://www.daum.net");
+			break;
+		case "google" :
+			response.sendRedirect("https://www.google.com");
+			break;
+			default : 
+				response.sendRedirect("https://www.yahoo.com");
+		}
+		}
 
 }
